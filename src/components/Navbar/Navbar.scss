@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .leftBar {
+        display: flex;
+        align-items: center;
+        span {
+        }
+        .search {
+            display: flex;
+            input {
+            }
+        }
+    }
+
+    .rightBar {
+        .user {
+            img {
+            }
+            span {
+            }
+        }
+    }
+}

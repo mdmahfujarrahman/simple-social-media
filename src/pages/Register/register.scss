@@ -1,0 +1,94 @@
+.register {
+    height: 100vh;
+    background-color: #e5ebb2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 50%;
+        display: flex;
+        background-color: aliceblue;
+        border-radius: 10px;
+        min-height: 500px;
+        align-items: center;
+        overflow: hidden;
+        flex-direction: row-reverse;
+        .left {
+            flex: 1;
+            background: linear-gradient(
+                    90deg,
+                    rgba(148, 187, 233, 0.3477766106442577) 0%,
+                    rgba(238, 174, 202, 0.28335084033613445) 96%
+                ),
+                url("../../asset/signupbg.jpg") center;
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+
+            gap: 30px;
+            color: #fff;
+            h1 {
+                font-size: 100px;
+                line-height: 100px;
+                margin: 0;
+            }
+            p {
+            }
+            span {
+                font-size: 14px;
+            }
+            button {
+                background-color: white;
+                width: 50%;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                color: black;
+                font-weight: bold;
+            }
+        }
+        .right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            h2 {
+                color: #555;
+                margin: 0;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                position: relative;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid lightgrey;
+                    padding: 20px 10px;
+                    background: transparent;
+                }
+                .eyeIcon {
+                    position: absolute;
+                    top: 275px;
+                    right: 25px;
+                }
+                input:focus {
+                    outline: none;
+                }
+                button {
+                    width: 50%;
+                    border: none;
+                    padding: 10px;
+                    background-color: #e5ebb2;
+                    color: black;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

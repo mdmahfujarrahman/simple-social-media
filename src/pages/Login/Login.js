@@ -1,13 +1,12 @@
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
     const [show, setShow] = useState(false)
-
-
-
+    const navigate = useNavigate();
 
   return (
       <div class="login">
@@ -21,7 +20,7 @@ const Login = () => {
                       in dignissimos dolores harum iste quas?
                   </p>
                   <span>Don't you have a account</span>
-                  <button>Register</button>
+                  <button onClick={() => navigate("/register")}>Register</button>
               </div>
               <div className="right">
                   <h2>Login</h2>
