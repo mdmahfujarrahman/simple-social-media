@@ -27,10 +27,10 @@ const Navbar = () => {
               <EmailOutlinedIcon />
               <NotificationsOutlinedIcon />
               <div className="user">
-                  {/* <img
+                  <img
                       src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg"
                       alt=""
-                  /> */}
+                  />
                   <span>Mahfuj</span>
               </div>
           </div>
