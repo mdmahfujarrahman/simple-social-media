@@ -18,11 +18,13 @@ const Router = () => {
 
     const Layout = () => {
         return (
-            <div className={`theme-${darkMode ? 'dark' : "light"}`}>
+            <div className={`theme-${darkMode ? "dark" : "light"}`}>
                 <Navbar />
                 <div className="layout">
                     <LeftBar />
-                    <Outlet />
+                    <div className="outlet">
+                        <Outlet />
+                    </div>
                     <RightBar />
                 </div>
             </div>
