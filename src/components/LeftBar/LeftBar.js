@@ -15,7 +15,7 @@ const LeftBar = () => {
                   </div>
                   {MainFeatures.map((item) => (
                       <div key={item.id} className="item">
-                          <img src={item.img} alt="" />
+                          <img src={item.img} alt={item.Name} />
                           <span>{item.Name}</span>
                       </div>
                   ))}
