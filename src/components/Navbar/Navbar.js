@@ -5,17 +5,29 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { authContext } from "../context/authContext";
+import { themeContext } from "../context/themeContext";
 import './Navbar.scss';
 
 const Navbar = () => {
+  const {toggle, darkMode} = useContext(themeContext)
+  const { currentUser } = useContext(authContext);
   const navigate = useNavigate();
+
+
   return (
       <div className="navbar">
           <div className="leftBar">
               <span onClick={() => navigate("/")}>TuT Social</span>
               <HomeOutlinedIcon />
-              <DarkModeOutlinedIcon />
+              {darkMode ? (
+                  <WbSunnyOutlinedIcon onClick={toggle} />
+              ) : (
+                  <DarkModeOutlinedIcon onClick={toggle} />
+              )}
               <GridViewOutlinedIcon />
               <div className="search">
                   <SearchOutlinedIcon />
@@ -27,11 +39,8 @@ const Navbar = () => {
               <EmailOutlinedIcon />
               <NotificationsOutlinedIcon />
               <div className="user">
-                  <img
-                      src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg"
-                      alt=""
-                  />
-                  <span>Mahfuj</span>
+                  <img src={currentUser?.img} alt="user?.name" />
+                  <span>{currentUser?.name}</span>
               </div>
           </div>
       </div>

@@ -1,58 +1,65 @@
+@import "../../util/style.scss";
+
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    height: 50px;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    border-bottom: 1px solid lightgrey;
-    .leftBar {
+    @include themify($themes) {
         display: flex;
         align-items: center;
-        gap: 30px;
-
-        span {
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .search {
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: 50px;
+        position: sticky;
+        top: 0;
+        background-color: themed("bg");
+        border-bottom: 1px solid themed("border");
+        color: themed("textColor");
+        .leftBar {
             display: flex;
             align-items: center;
-            gap: 10px;
-            border: 1px solid lightgrey;
-            border-radius: 5px;
-            padding: 5px;
-            input {
-                width: 500px;
-                border: none;
-                background: transparent;
-            }
-            input:focus {
-                outline: none;
-            }
-        }
-    }
+            gap: 30px;
 
-    .RightBar {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        .user {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            img {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
             span {
-                font-weight: 500;
+                font-weight: bold;
+                font-size: 20px;
+                color: themed("logo");
+            }
+
+            .search {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid themed("border");
+                border-radius: 5px;
+                padding: 5px;
+                input {
+                    width: 500px;
+                    border: none;
+                    background: transparent;
+                    color: themed("textColor");
+                }
+                input:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .RightBar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span {
+                    font-weight: 500;
+                }
             }
         }
     }
