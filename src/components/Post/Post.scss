@@ -14,7 +14,7 @@
                 align-items: center;
                 justify-content: space-between;
 
-                .info {
+                .p-info {
                     display: flex;
                     gap: 10px;
                     img {
@@ -28,6 +28,7 @@
                         flex-direction: column;
                         .user-name {
                             font-weight: 500;
+                            cursor: pointer;
                         }
                         .date {
                             font-size: 12px;

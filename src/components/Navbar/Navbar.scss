@@ -36,6 +36,12 @@
                     border: none;
                     background: transparent;
                     color: themed("textColor");
+                    @include mobile {
+                        display: none;
+                    }
+                    @include tablet {
+                        width: 200px;
+                    }
                 }
                 input:focus {
                     outline: none;
@@ -47,11 +53,16 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            @include mobile {
+                display: none;
+            }
             .user {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-
+                @include tablet {
+                    display: none;
+                }
                 img {
                     width: 30px;
                     height: 30px;
