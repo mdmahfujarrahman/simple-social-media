@@ -8,7 +8,7 @@ const Posts = () => {
      const { isLoading, error, data } = useQuery(["posts"], async () =>{
             return await GetPost();
         })
-    console.log(data?.data);
+
     return (
         <div className="posts">
             {error
