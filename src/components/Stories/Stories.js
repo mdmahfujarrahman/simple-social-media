@@ -9,7 +9,7 @@ const Stories = () => {
   return (
       <div className="stories">
           <div className="story">
-              <img src={currentUser?.img} alt="story.name" />
+              <img src={currentUser?.profilePic} alt="story.name" />
               <span>{currentUser?.name}</span>
               <button>+</button>
           </div>

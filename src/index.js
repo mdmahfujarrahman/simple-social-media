@@ -5,6 +5,8 @@ import { AuthContextProvider } from './components/context/authContext';
 import { ThemeContextProvider } from './components/context/themeContext';
 import './index.css';
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>

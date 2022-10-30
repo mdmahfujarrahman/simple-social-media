@@ -11,9 +11,9 @@ const Comments = () => {
     return (
         <div className="comments">
             <div className="write">
-                <img src={currentUser?.img} alt="" />
-                    <input type="text" placeholder="Write Your Comment Comment"/>
-                    <button>Comment</button>
+                <img src={currentUser?.profilePic} alt="" />
+                <input type="text" placeholder="Write Your Comment Comment" />
+                <button>Comment</button>
             </div>
             {CommentData.map((comment) => (
                 <div className="comment">

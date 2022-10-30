@@ -1,15 +1,23 @@
+import { useQuery } from '@tanstack/react-query';
+import { GetPost } from '../../util/API/ClinetAPI';
 import Post from '../Post/Post';
-import { PostData } from './constant';
 import './Posts.scss';
 
 const Posts = () => {
-  return (
-      <div className="posts">
-          {PostData.map((post) => (
-              <Post key={post.id} post={post} />
-          ))}
-      </div>
-  );
+
+     const { isLoading, error, data } = useQuery(["posts"], async () =>{
+            return await GetPost();
+        })
+    console.log(data?.data);
+    return (
+        <div className="posts">
+            {error
+                ? "Something went wrong"
+                : isLoading
+                ? "Loading...."
+                : data?.data.map((post) => <Post key={post.id} post={post} />)}
+        </div>
+    );
 }
 
 export default Posts

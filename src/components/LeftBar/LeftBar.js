@@ -10,7 +10,10 @@ const LeftBar = () => {
             <div className="container">
                 <div className="menu">
                     <div className="user">
-                        <img src={currentUser?.img} alt={currentUser?.name} />
+                        <img
+                            src={currentUser?.profilePic}
+                            alt={currentUser?.name}
+                        />
                         <span>{currentUser?.name}</span>
                     </div>
                     {MainFeatures.map((item) => (

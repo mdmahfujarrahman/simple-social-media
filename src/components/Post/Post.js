@@ -40,7 +40,7 @@ const Post = ({post}) => {
                     <MoreHorizIcon />
                 </div>
                 <div className="content">
-                    <p>{post?.des}</p>
+                    <p>{post?.description}</p>
                     <img src={post?.img} alt="" />
                 </div>
                 <div className="action">

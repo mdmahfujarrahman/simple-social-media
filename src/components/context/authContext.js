@@ -1,18 +1,15 @@
 import { createContext, useEffect, useState } from "react";
+import { Login } from "../../util/API/ClinetAPI";
 
 export const authContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(
-        JSON.parse(localStorage.getItem("user")) || null
-    );
+    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")) || null);
 
-    const login= () => {
-        setCurrentUser({
-            id: 1,
-            name: "Mahfuj",
-            img: "https://i.pinimg.com/222x/7d/1a/3f/7d1a3f77eee9f34782c6f88e97a6c888.jpg",
-        });
+    const login = async (data) => {
+        const loginData = await Login(data)
+        console.log(loginData.data);
+        setCurrentUser(loginData.data);
     };
 
     useEffect(() => {
